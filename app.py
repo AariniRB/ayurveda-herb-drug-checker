@@ -43,9 +43,9 @@ if st.button("Analyze Safety Interaction", type="primary"):
     else:
         with st.spinner("Analyzing pharmacological and phytochemical interactions..."):
             try:
-                # Initialize Hugging Face Inference Client
+                # Initialize Hugging Face Inference Client using an active serverless endpoint
                 client = InferenceClient(
-                    model="meta-llama/Llama-3.2-3B-Instruct",
+                    model="Qwen/Qwen2.5-Coder-32B-Instruct",
                     token=hf_token
                 )
 
